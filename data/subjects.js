@@ -1,7 +1,7 @@
 const subjects = [
     {
-        title: "Subject 1",
-        sourceUrl: "https://www.pinterest.com/",
+        title: "Hera Syndulla | Star Wars Rebels",
+        sourceUrl: "https://www.pinterest.com/pin/535435843224498535/",
         sourceLabel: "View source on Pinterest"
     },
     {
