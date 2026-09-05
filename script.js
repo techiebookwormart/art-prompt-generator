@@ -11,27 +11,30 @@ function generatePrompt() {
     const output = document.getElementById("prompt-output");
 
     output.innerHTML = `
-        <h2>Your Art Prompt</h2>
+    <h2>Your Art Prompt</h2>
 
-        <h3>Subject</h3>
-        <p>
-            <a href="${subject.sourceUrl}" target="_blank">
-                ${subject.title}
-            </a>
-        </p>
+    <h3>Subject</h3>
+    <p>${subject.title}</p>
+    <p>
+        <a href="${subject.sourceUrl}" target="_blank">
+            ${subject.sourceLabel}
+        </a>
+    </p>
 
-        <h3>Composition</h3>
-        <p>
-            <a href="${composition.sourceUrl}" target="_blank">
-                ${composition.title}
-            </a>
-        </p>
+    <h3>Composition</h3>
+    <p>${composition.title}</p>
+    <p>
+        <a href="${composition.sourceUrl}" target="_blank">
+            ${composition.sourceLabel}
+        </a>
+    </p>
 
-        <h3>Color Palette</h3>
-        <p>
-            <a href="${palette.sourceUrl}" target="_blank">
-                ${palette.title}
-            </a>
-        </p>
-    `;
+    <h3>Color Palette</h3>
+    <p>${palette.title}</p>
+    <p>
+        <a href="${palette.sourceUrl}" target="_blank">
+            ${palette.sourceLabel}
+        </a>
+    </p>
+`;
 }
