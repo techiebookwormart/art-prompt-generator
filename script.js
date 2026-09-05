@@ -35,7 +35,3 @@ function generatePrompt() {
         </p>
     `;
 }
-
-document
-    .getElementById("generate-button")
-    .addEventListener("click", generatePrompt);
