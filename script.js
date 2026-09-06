@@ -13,28 +13,52 @@ function generatePrompt() {
     output.innerHTML = `
     <h2>Your Art Prompt</h2>
 
-    <h3>Subject</h3>
-    <p>${subject.title}</p>
-    <p>
-        <a href="${subject.sourceUrl}" target="_blank">
+    <div class="prompt-card">
+        <h3>Subject</h3>
+
+        <div class="image-placeholder">
+            Reference Image
+        </div>
+
+        <p class="prompt-result">${subject.title}</p>
+
+        <a class="source-link"
+           href="${subject.sourceUrl}"
+           target="_blank">
             ${subject.sourceLabel}
         </a>
-    </p>
+    </div>
 
-    <h3>Composition</h3>
-    <p>${composition.title}</p>
-    <p>
-        <a href="${composition.sourceUrl}" target="_blank">
+    <div class="prompt-card">
+        <h3>Composition</h3>
+
+        <div class="image-placeholder">
+            Reference Image
+        </div>
+
+        <p class="prompt-result">${composition.title}</p>
+
+        <a class="source-link"
+           href="${composition.sourceUrl}"
+           target="_blank">
             ${composition.sourceLabel}
         </a>
-    </p>
+    </div>
 
-    <h3>Color Palette</h3>
-    <p>${palette.title}</p>
-    <p>
-        <a href="${palette.sourceUrl}" target="_blank">
+    <div class="prompt-card">
+        <h3>Color Palette</h3>
+
+        <div class="image-placeholder">
+            Reference Image
+        </div>
+
+        <p class="prompt-result">${palette.title}</p>
+
+        <a class="source-link"
+           href="${palette.sourceUrl}"
+           target="_blank">
             ${palette.sourceLabel}
         </a>
-    </p>
+    </div>
 `;
 }
