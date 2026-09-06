@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    padding: 24px;
+    padding: 30px 20px;
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     color: #222;
@@ -16,79 +16,95 @@ h1 {
 }
 
 #prompt-output {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto 24px auto;
-}
 
-#prompt-output h2 {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-/* Turn the generated prompt sections into cards */
-#prompt-output {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
-/* Keep the main title across the whole row */
-#prompt-output h2 {
+#prompt-output > h2 {
     grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Card styling */
-#prompt-output h3 {
-    margin: 0;
-    padding: 16px 16px 8px 16px;
+/* Individual prompt cards */
+
+.prompt-card {
     background: white;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
+    padding: 18px;
 }
 
-/* Each title/result/source group */
-#prompt-output h3 + p {
-    margin: 0;
-    padding: 8px 16px;
-    background: white;
+.prompt-card h3 {
+    text-align: center;
+    margin-top: 0;
 }
 
-#prompt-output h3 + p + p {
-    margin: 0;
-    padding: 8px 16px 16px 16px;
-    background: white;
-    border-radius: 0 0 12px 12px;
+/* Temporary area where our image will eventually appear */
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eeeeee;
+    border-radius: 8px;
+
+    color: #777;
+    margin-bottom: 16px;
 }
 
-/* Source links */
-#prompt-output a {
+/* Generated result */
+
+.prompt-result {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+/* Attribution */
+
+.source-link {
+    font-size: 0.85rem;
     color: #555;
-    font-size: 0.9rem;
 }
 
-/* Button */
+/* Generate button */
+
 #generate-button {
     display: block;
     margin: 0 auto;
-    padding: 12px 22px;
+
+    padding: 12px 24px;
+
     font-size: 1rem;
     font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 1px solid #888;
+
     background: white;
+    border: 1px solid #888;
+    border-radius: 8px;
+
+    cursor: pointer;
 }
 
-/* Mobile layout */
+/* Phone / small screen */
+
 @media (max-width: 700px) {
+
     body {
-        padding: 16px;
+        padding: 20px 14px;
     }
 
     #prompt-output {
         grid-template-columns: 1fr;
     }
 
-    #prompt-output h2 {
+    #prompt-output > h2 {
         grid-column: 1;
     }
 
