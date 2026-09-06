@@ -1,3 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#prompt-output {
+    max-width: 1000px;
+    margin: 0 auto 24px auto;
+}
+
+#prompt-output h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Turn the generated prompt sections into cards */
+#prompt-output {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* Keep the main title across the whole row */
+#prompt-output h2 {
+    grid-column: 1 / -1;
+}
+
+/* Card styling */
+#prompt-output h3 {
+    margin: 0;
+    padding: 16px 16px 8px 16px;
+    background: white;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Each title/result/source group */
+#prompt-output h3 + p {
+    margin: 0;
+    padding: 8px 16px;
+    background: white;
+}
+
+#prompt-output h3 + p + p {
+    margin: 0;
+    padding: 8px 16px 16px 16px;
+    background: white;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Source links */
+#prompt-output a {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Button */
+#generate-button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #888;
+    background: white;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    body {
+        padding: 16px;
+    }
+
+    #prompt-output {
+        grid-template-columns: 1fr;
+    }
+
+    #prompt-output h2 {
+        grid-column: 1;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
 }
